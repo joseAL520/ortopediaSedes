@@ -1,0 +1,14 @@
+.conteiner-sede{
+    height: 250px;
+    margin: 15px;
+    border-radius: 33px;
+}
+
+span{
+    font-weight: bold;
+}
+.conteiner-promotions{
+    margin: 45px;
+    width: 1790px;
+    height: 300px;
+}

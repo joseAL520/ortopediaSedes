@@ -1,0 +1,48 @@
+
+.slider-box{
+    width: 1260px;
+    overflow: hidden;
+    border-radius: 33px;
+    margin: 50px auto 0;
+}
+
+.slider-box ul {
+    width: 1260px;
+    display: flex;
+    animation: slide 10s infinite alternate ease-in-out ;
+}
+
+.slider-box li{
+    list-style: none;
+    position: relative;
+}
+
+/* .conteiner-text{
+    position: absolute;
+    text-align: center;
+    padding: 0 250px;
+    top: 250px;
+    color: white;
+}
+
+.conteiner-text h2 {
+    font-size: 4px;
+    margin-bottom: 35px;
+} */
+
+img {
+    border-radius: 33px;
+}
+.slider-box img{
+    width: 1260px;
+    height: 300px;
+}
+
+@keyframes slide {
+    0%{ margin-left: 0;}
+    0%{ margin-left: 0;}
+
+    15%{ margin-left: -103%}
+    
+}
+

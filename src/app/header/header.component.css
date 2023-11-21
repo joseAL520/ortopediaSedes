@@ -1,0 +1,49 @@
+
+.header-conteiner{
+    padding: 20PX 0;
+    background-color: #000;
+}
+
+
+.new-home-v4-header-logo {
+    border-radius: 200px;
+    width: 100px;
+}
+/* Iment  of menu */
+.menu-item{
+    margin-top: 16px;
+}
+
+.menu-item ul{
+    padding: 0px;
+    margin: 0pc;
+}
+
+.menu-item ul li{
+    list-style-type: none;
+    color: #fff;
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 30px;
+}
+
+a {
+    color: white;
+}
+
+.menu-item ul li:hover{
+    color: rgb(217, 255, 0);
+    cursor: pointer;
+    transition: 0.6 ease-in-out;
+}
+
+
+/* Boton del login */
+
+.btn-login{
+    border: 20px;
+    background: #12c8ff;
+    border: 10px solid #12c8ff;
+    border-radius: 60px;
+    color: black;
+}

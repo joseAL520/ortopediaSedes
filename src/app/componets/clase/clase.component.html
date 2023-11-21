@@ -1,0 +1,17 @@
+<div class="col-md-3 col-sm-6 col-3">
+    <button class="btn-login" (click)="openModalLogin()">
+        <img src="../assets/img/registro.png" width="30" height="30" class="d-inline-block " alt="">
+        Registrar cliente</button>
+    <div class="" *ngIf="openRegistrer == true">
+        <app-registrer-user [editMode]="editMode" [dataEdit]="dataEdit"></app-registrer-user>
+    </div>
+</div>
+
+<div class="col-md-3 col-sm-6 col-3">
+    <button class="btn-login" (click)="openRegistrerUser()">
+        <img src="../assets/img/clientes.png" width="30" height="30" class="d-inline-block " alt="">
+        Lista de clientes</button>
+    <div class="" *ngIf="openListRegistrer == true">
+        <app-lista-registrer-user (emitEditar)="editarMode($event)"></app-lista-registrer-user>
+    </div>
+</div>

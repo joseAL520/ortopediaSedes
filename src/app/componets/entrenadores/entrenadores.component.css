@@ -1,0 +1,16 @@
+.conteiner-tranin{
+    height: 550px;
+    margin: 15px;
+    border-radius: 33px;
+    background: rgb(211, 208, 197);
+    
+}
+
+span{
+    font-weight: bold;
+}
+
+div{
+    margin: 10px;
+}
+

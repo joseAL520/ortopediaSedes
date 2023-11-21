@@ -1,0 +1,28 @@
+<header>
+    <div class="header-conteiner">
+        <div class="row">
+
+            <div class="col-md-3 col-sm-3 col-3 text-center">
+                <img class="new-home-v4-header-logo" src="../assets/img/logo.svg" alt="Logo Fit">
+            </div>
+
+            <div class="col-md-6 col-sm-6 col-6 text-center">
+                <div class="menu-item">
+                    <ul>
+                        <li> <a [routerLink]="['/sede']"  href="#">Sedes        </a></li>
+                        <li> <a [routerLink]="['/producto']"  href="#">Productos    </a></li>
+                        <li> <a [routerLink]="['/entrenador']"  href="#">Medicos </a></li>
+                        <!-- <li> <a [routerLink]="['/clase']"  href="#">Clases       </a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-3">
+                <button class="btn-login" (click)="openModalLogin()">Empieza ahora!</button>
+                <div class="" *ngIf="openModalSwithLogin == true">
+                    <app-login></app-login>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>

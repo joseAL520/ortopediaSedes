@@ -1,0 +1,12 @@
+.conteiner-form{
+    width: 1100px;
+    height: 660px;
+    position: relative;
+    left: 65%;
+    top: 25px;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: row;
+}

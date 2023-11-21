@@ -1,0 +1,27 @@
+
+<div class="conteiner-form">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col" *ngFor="let item of columnas">{{item}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let dato of datos$ | async">
+            <th scope="row">{{dato.numeroIdentificacion}}</th>
+            <td>{{dato.nombres}}</td>
+            <td>{{mapGenero(dato.genero)}}</td>
+            <td>{{dato.numeroCelular}}</td>
+            <td>{{dato.diagnostico}}</td>
+            <td>
+              <div class="acciones">
+                <button (click)="editar(dato)">Editar</button>
+                <button (click)="eliminar(dato.numeroIdentificacion)">Eliminar</button>
+              </div>
+            </td>
+          </tr>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,14 @@
+.contteiner-mision{
+    width: 894px;
+    height: 300px;
+    border: 2px solid #555;
+}
+
+.contteiner-vision{
+    position: relative;
+    width: 894px;
+    height: 300px;
+    left: 894px;
+    top:-300px;
+    border: 2px solid #696767;
+}
