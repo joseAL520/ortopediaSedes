@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DatosFormulario } from 'src/app/interfaces/registrar';
+import { ListRegisterService } from 'src/app/services/list-register.service';
 
 @Component({
   selector: 'app-registrer-user',
@@ -12,7 +13,7 @@ export class RegistrerUserComponent implements OnInit {
   @Input() dataEdit!: DatosFormulario;
   formulario!: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private register : ListRegisterService) {
 
   }
 
@@ -29,10 +30,22 @@ export class RegistrerUserComponent implements OnInit {
 
   enviarDatos() {
     if (this.formulario.valid) {
-      const datos: DatosFormulario = this.formulario.value;
-      console.log(datos);
+      const datos: DatosFormulario = {
+        numeroIdentificacion: this.formulario.value.numeroIdentificacion,
+        nombres: this.formulario.value.nombres,
+        apellidos: this.formulario.value.apellidos,
+        genero: Number(this.formulario.value.genero),
+        numeroCelular: this.formulario.value.numeroCelular,
+        diagnostico: this.formulario.value.diagnostico
+      }
+      if (this.editMode) {
+        this.register.editar(datos);
+      } else {
+        this.register.registrar(datos);
+      }
+
     } else {
+      alert('Falto algo')
     }
   }
-
 }

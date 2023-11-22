@@ -1,6 +1,6 @@
 <form class="conteiner-form" [formGroup]="formulario">
   <div class="col">
-    <span> Numero de Identificacion: </span> <input type="number" placeholder="# de Identificacion" class="form-control" formControlName="numeroIdentificacion">
+    <span> Numero de Identificacion: </span> <input type="number" placeholder="# de Identificacion" class="form-control" formControlName="numeroIdentificacion" [readOnly]="editMode">
   </div>
 <br>
     <div class="row">
