@@ -18,7 +18,6 @@ export class ListRegisterService {
 
   getList(): Observable<any> {
    return this.http.get(`${this.apiUrl}/register.json`)
-    
   }
   editData(data: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/register.json`, data);
@@ -30,9 +29,10 @@ export class ListRegisterService {
   }
 
   registrar(data: DatosFormulario) {
-    const datosActuales = this.datosSubject.value;
-    const newData = [...datosActuales, data];
-    this.datosSubject.next(newData);
+    // const datosActuales = this.datosSubject.value;
+    // const newData = [...datosActuales, data];
+    // this.datosSubject.next(newData);
+    return this.http.post(`${this.apiUrl}/register.json`,data)
   }
 
   editar(data: DatosFormulario) {

@@ -40,8 +40,10 @@ export class RegistrerUserComponent implements OnInit {
       }
       if (this.editMode) {
         this.register.editar(datos);
+        alert("Actualizado Usuario");
       } else {
-        this.register.registrar(datos);
+        this.register.registrar(datos).subscribe();
+        alert("Usuario registrado");
       }
 
     } else {
