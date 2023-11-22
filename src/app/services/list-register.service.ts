@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { BehaviorSubject, Observable, map, of } from "rxjs";
+import { BehaviorSubject, Observable } from "rxjs";
 import { datosFormularioMock } from "./list-register.mock";
 import { DatosFormulario } from "../interfaces/registrar";
 import { environment } from "src/environments/environment";
@@ -17,7 +17,7 @@ export class ListRegisterService {
   constructor(private http: HttpClient) { }
 
   getList(): Observable<any> {
-   return this.http.get(`${this.apiUrl}/register.json`)
+   return this.http.get(`${this.apiUrl}/register.json`);
   }
   editData(data: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/register.json`, data);

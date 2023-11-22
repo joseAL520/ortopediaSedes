@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { DatosFormulario } from 'src/app/interfaces/registrar';
 import { ListRegisterService } from 'src/app/services/list-register.service';
 
@@ -7,15 +7,24 @@ import { ListRegisterService } from 'src/app/services/list-register.service';
   templateUrl: './lista-registrer-user.component.html',
   styleUrls: ['./lista-registrer-user.component.css']
 })
-export class ListaRegistrerUserComponent {
-  @Output() emitEditar = new EventEmitter<DatosFormulario>();
+export class ListaRegistrerUserComponent implements OnInit{
   columnas = ['# Iden.','Nombres', 'Genero', '# Celular', 'Diagnostico', 'Acciones']
-  datos$ = this.apiMock.datos$;
+
+  data: any[] = [];
   constructor(private apiMock: ListRegisterService){
   }
+  ngOnInit(): void {
+    this.apiMock.getList().subscribe(data => {
+        this.data = Object.values(data); 
+        console.log(data)
+      }
+    );
+  }
+  
+
 
   editar(data: DatosFormulario): void {
-    this.emitEditar.emit(data);
+    // this.emitEditar.emit(data);
   }
 
   eliminar(numeroIdentificacion: number): void {

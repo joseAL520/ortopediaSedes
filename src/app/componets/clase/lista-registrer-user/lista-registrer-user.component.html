@@ -7,7 +7,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let dato of datos$ | async">
+          <tr *ngFor="let dato of data">
             <th scope="row">{{dato.numeroIdentificacion}}</th>
             <td>{{dato.nombres}}</td>
             <td>{{mapGenero(dato.genero)}}</td>
