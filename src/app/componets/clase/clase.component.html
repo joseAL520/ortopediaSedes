@@ -12,6 +12,6 @@
         <img src="../assets/img/clientes.png" width="30" height="30" class="d-inline-block " alt="">
         Lista de clientes</button>
     <div class="" *ngIf="openListRegistrer == true">
-        <app-lista-registrer-user></app-lista-registrer-user>
+        <app-lista-registrer-user (emitEditar)="editarMode($event)"></app-lista-registrer-user>
     </div>
 </div>

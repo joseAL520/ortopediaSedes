@@ -9,7 +9,7 @@ import { ListRegisterService } from 'src/app/services/list-register.service';
 })
 export class ListaRegistrerUserComponent implements OnInit{
   columnas = ['# Iden.','Nombres', 'Genero', '# Celular', 'Diagnostico', 'Acciones']
-
+  @Output() emitEditar = new EventEmitter<DatosFormulario>();
   data: any[] = [];
   constructor(private apiMock: ListRegisterService){
   }
@@ -24,7 +24,7 @@ export class ListaRegistrerUserComponent implements OnInit{
 
 
   editar(data: DatosFormulario): void {
-    // this.emitEditar.emit(data);
+    this.emitEditar.emit(data);
   }
 
   eliminar(numeroIdentificacion: number): void {
